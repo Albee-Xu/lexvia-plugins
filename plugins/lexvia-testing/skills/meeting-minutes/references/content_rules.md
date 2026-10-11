@@ -1,15 +1,15 @@
-# 内容规则
+# Content rules
 
-提取已确认决定、行动项、负责人、期限、既有任务状态、风险、阻塞项和待确认事项。每个议题的讨论仅用一句自然中文概括；不要逐字复述听写，也不要把提议写成决定。
+Extract confirmed decisions, action items, owners, deadlines, prior-task status, risks, blockers, and open questions. Summarize each topic discussion in one natural Chinese sentence. Do not create a verbatim recap or treat a proposal as a decision.
 
-## 信息可信度与写法
+## Information confidence and wording
 
-按听写支持的最高确定程度表达，不能因为字段缺失就默认写 `待确认`。
+Use the most specific wording supported by the transcript. Do not use `待确认` as a default for a missing field.
 
-1. **已确认事实**：只有听写明确陈述时，才能直接写出决定、行动、负责人、日期、金额或状态。
-2. **语境明确的后续**：听写明确说明工作和负责业务范围、但未点名个人时，写 `相关团队（按会议安排）`；未给期限时，写 `按项目节奏推进`。不得借此虚构团队、行动或期限。
-3. **关键未决事实**：只有会阻塞执行的冲突信息、未定审批、预算、合同、供应商/外部承诺，或缺少负责人会阻塞工作的情形，才写 `待确认`；说明需要确认什么及其原因。
+1. **Confirmed facts**: State a decision, action, owner, date, amount, or status directly only when the transcript clearly states it.
+2. **Contextually clear follow-up**: When the transcript clearly establishes the work and responsible business area but not an individual, use `相关团队（按会议安排）`. When no deadline is stated, use `按项目节奏推进`. Never use either phrase to invent a team, action, or timing.
+3. **Material unresolved facts**: Use `待确认` only when a concrete item must be checked before execution can proceed: conflicting facts, an undecided approval, budget, contract, supplier or external commitment, or an owner whose absence blocks the work. State what must be confirmed and why.
 
-行动项负责人仅在主持人明确指派、具名或已确认映射的发言人接受任务时成立。仅仅匹配到名单不是确认。若行动、交付物或业务范围无法安全概括，省略该行动项，不要编造笼统占位内容。
+An action owner is confirmed only when the host explicitly assigns work, a named or clearly mapped speaker accepts it, or the proposed owner agrees. Roster matching alone is not confirmation. If the action, deliverable, or business area cannot be safely summarized, omit it rather than creating a generic placeholder.
 
-风险表只记录需要单独跟进、并影响决定、时间线、预算或交付的重要未决事项；不要重复行动项中普通的未完成字段。
+Use the risk table only for material unresolved matters that need separate follow-up and affect a decision, timeline, budget, or delivery. Do not repeat ordinary incomplete fields from action items there.

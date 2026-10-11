@@ -1,56 +1,56 @@
-# 会议纪要正文与表格模板
+# Meeting minutes body and table template
 
-本文件规定纪要的正文结构、基本信息表、行动项表和风险表。只替换内容；不得增加、删改或重新排列章节、字段、表格列、列宽比例或样式。不得推断；`待确认` 仅用于会阻塞执行或存在冲突的关键未决事实。
+This file defines the minutes structure, information table, action-item table, and risk table. Replace content only; do not add, delete, or reorder sections, fields, table columns, column proportions, or styles. Do not infer facts. Use `待确认` only for a material unresolved fact that blocks execution or has conflicting evidence.
 
-## 文字样式
+## Text styles
 
-| 元素 | 样式 |
+| Element | Style |
 | --- | --- |
-| 中文 | 楷体（KaiTi；无该字体时使用与模板一致的替代字体） |
-| 英文和数字 | Times New Roman |
-| 主标题「会议纪要」 | 19 pt，黑色，加粗，居中 |
-| 副标题 | 11 pt，黑色，居中 |
-| 一级章节 | 15 pt，黑色，加粗，使用「一、」「二、」编号 |
-| 议题编号 | 11 pt，黑色，加粗，使用「1.」「2.」编号 |
-| 议题名称 | 12 pt，黑色，加粗 |
-| 正文／基本信息表正文 | 10.5 pt，黑色 |
-| 表格表头 | 9.5-10 pt，白色，加粗 |
-| 表格正文 | 9-10 pt，黑色 |
+| Chinese | KaiTi, or the template's equivalent fallback font |
+| English and numbers | Times New Roman |
+| Main title `会议纪要` | 19 pt, black, bold, centered |
+| Subtitle | 11 pt, black, centered |
+| Main sections | 15 pt, black, bold, numbered `一、` through `五、` |
+| Topic number | 11 pt, black, bold, numbered `1.`, `2.`, and so on |
+| Topic name | 12 pt, black, bold |
+| Body and information-table text | 10.5 pt, black |
+| Table header | 9.5–10 pt, white, bold |
+| Table body | 9–10 pt, black |
 
-## 固定文档结构
+## Required document structure
 
 ```text
 会议纪要
-<会议副标题／会议主题>
+<meeting subtitle or topic>
 
 一、会议基本信息
-<固定 4 行 × 2 列表格>
+<fixed 4 × 2 table>
 
 二、会议结论
-<一段会议结论摘要>
+<one-paragraph meeting conclusion>
 
 三、重点讨论与后续
-<按实际议题重复的固定议题单元>
+<repeat the fixed topic unit for each actual topic>
 
 四、行动项
-<固定 5 列行动项表格；必要时续表>
+<fixed 5-column action table; continuation table if necessary>
 
 五、待跟进与风险
-<固定 3 列风险表格>
+<fixed 3-column risk table>
 ```
 
-不得新增“出席／缺席”独立章节；出席人员必须填入“会议基本信息”表。
+Do not add a separate attendance or absence section. Record attendees in the meeting-information table.
 
-## 表格
+## Tables
 
-### 一、会议基本信息
+### Meeting information
 
-使用固定 4 行 × 2 列表格，左右等宽；字段顺序固定为：会议主题、会议日期、出席人员、其他相关人员。左侧标签列为浅粉色底、黑色加粗文字；右侧为白色底、常规文字。外部人员未提及时填“未提及”。
+Use a fixed 4 × 2 table with equal-width columns. The field order is: meeting topic, meeting date, attendees, and other relevant people. The left label column uses pale pink fill and bold black text; the right column uses white fill and regular black text. If no external people are mentioned, enter `未提及`.
 
-### 四、行动项
+### Action items
 
-固定五列：`事项｜行动与交付物｜负责人｜期限｜状态`。表头为品牌深红色底、白色加粗文字；正文白底并使用浅灰细边框。跨页时续页标题为“**四、行动项续**”，并重复表头。
+Use exactly five columns: `事项｜行动与交付物｜负责人｜期限｜状态`. Use the branded dark-red header with bold white text, white body rows, and thin light-gray borders. If the table spans pages, use `四、行动项续` as the continuation title and repeat the header.
 
-### 五、待跟进与风险
+### Follow-up and risks
 
-固定三列：`待确认事项｜影响｜后续处理`。表头、边框、内边距和正文样式与行动项表一致。
+Use exactly three columns: `待确认事项｜影响｜后续处理`. Match the action table's header, borders, cell padding, and body style.

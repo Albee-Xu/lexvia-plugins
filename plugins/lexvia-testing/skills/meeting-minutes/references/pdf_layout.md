@@ -1,27 +1,26 @@
-# PDF 版式规范
+# PDF layout specification
 
-本文件仅规定正文、表格及分页。页眉、页脚和底板以 `assets/Logo Template.docx` 为准；更换底板不得改变下列规则。
+This file governs body text, tables, and pagination. Use `assets/Logo Template.docx` as the authority for headers, footers, background, and page setup. Replacing the background must not change the rules below.
 
-## 生成方式
+## Generation
 
-1. 同时以 `meeting_minutes_template.md` 和 `Logo Template.docx` 为排版源：前者规定正文结构、表格和样式，后者提供抬头、页脚、底板和页面设置。
-2. 模板可以只有品牌底稿和空白正文；必须依照正文模板创建 4 × 2 基本信息表、5 列行动项表和 3 列风险表。不得用既有会议成品临时充当模板。
-3. 可使用 Word/WPS，或程序化 DOCX 配合 LibreOffice/`soffice` 导出 PDF。无论采用何种方式，都必须保留品牌底稿并通过本文件的验收。
-4. PDF 页面为 A4 纵向；保留模板设定的页边距、页眉、页脚和底板。
+1. Use both `meeting_minutes_template.md` and `Logo Template.docx`: the former defines the content structure, tables, and styles; the latter provides branded headers, footers, background, and page settings.
+2. The template may contain only branded artwork and an empty body. Build the 4 × 2 meeting-information table, the 5-column action table, and the 3-column risk table from the body template. Do not use a prior meeting deliverable as a template.
+3. Word/WPS or a programmatic DOCX workflow followed by LibreOffice/`soffice` PDF export is acceptable. Every approach must preserve the brand template and pass this specification.
+4. Use A4 portrait pages and retain the template's margins, headers, footers, and background.
 
-## 文字与层级
+## Typography and hierarchy
 
-- 中文使用楷体（KaiTi；没有时使用模板指定的替代字体），英文和数字使用 Times New Roman。
-- 主标题：19 pt、黑色、加粗、居中；副标题：11 pt、黑色、居中。
-- 一级章节：15 pt、黑色、加粗，编号为「一、」至「五、」。
-- 议题编号：11 pt、黑色、加粗；议题名称：12 pt、黑色、加粗；正文：10.5 pt、黑色。
-- 表格表头：9.5-10 pt、白色、加粗；表格正文：9-10 pt、黑色。
+- Use KaiTi for Chinese, or the template's designated fallback; use Times New Roman for English and numbers.
+- Use a 19 pt black bold centered main title and an 11 pt black centered subtitle.
+- Use 15 pt black bold main sections, numbered `一、` through `五、`; use 11 pt bold topic numbers, 12 pt bold topic names, and 10.5 pt body text.
+- Use 9.5–10 pt bold white table headers and 9–10 pt black table body text.
 
-## 表格与分页
+## Tables and pagination
 
-- 基本信息固定为 4 行 × 2 列，左右列等宽。左列浅粉底、黑色加粗；右列白底、黑色常规。
-- 行动项固定五列，风险固定三列。表头使用品牌深红底、白色加粗；正文白底、浅灰细边框，单元格左对齐、垂直居中。
-- “一、会议基本信息”及其表格必须同页。章节标题、议题标题和标签不得独占页尾；应与紧随正文同页。
-- 表格应按自然文档流排版。若完整表格无法放入当前页且仅能容纳表头或表头加一行正文，将整张表移至下一页。
-- 表格跨页时重复表头；单行不得拆分；行动项续页必须使用“**四、行动项续**”。风险表不得插入行动项续表之间。
-- 交付前渲染检查每一页：中文字体、标题层级、列数与顺序、表头颜色、边框、换行、分页、页眉页脚和底板。空白页、近空白页、孤立标题、孤立表头、缺少续表标题或缺字框均不合格。
+- The meeting-information table is always 4 × 2 with equal-width columns. Its left column uses pale pink fill and bold black text; its right column uses white fill and regular black text.
+- The action table has five columns and the risk table has three. Use branded dark-red headers with bold white text, white body rows, thin light-gray borders, left-aligned text, and vertically centered cells.
+- Keep `一、会议基本信息` and its table on the same page. Keep section headings, topic headings, and labels with their following content; never leave them alone at the bottom of a page.
+- Follow natural document flow. If a complete table cannot fit and the remaining space only fits a header or a header plus one row, move the entire table to the next page.
+- Repeat headers when a table spans pages and never split a row. Action-table continuation pages must use `四、行动项续`. Do not insert the risk table between action-table continuations.
+- Render and inspect every page before delivery for Chinese-font support, hierarchy, column count and order, header colors, borders, wrapping, pagination, headers, footers, and background. Blank or near-blank pages, orphaned headings or table headers, missing continuation titles, or missing glyphs are unacceptable.

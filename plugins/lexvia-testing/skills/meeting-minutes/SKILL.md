@@ -1,40 +1,40 @@
 ---
 name: meeting-minutes
-description: 将用户在聊天中粘贴或上传的会议听写文本整理为简洁、可执行的中文会议纪要 PDF；适用于需要提取决策、行动项、负责人、期限、风险和待确认事项的会议记录。
+description: Turn meeting transcript text pasted or uploaded by the user into concise, actionable Chinese meeting-minutes PDFs, extracting decisions, action items, owners, deadlines, risks, and open questions.
 ---
 
-# 会议纪要自动化
+# Meeting Minutes Automation
 
-使用本技能处理聊天中直接粘贴的会议听写文本，或用户上传的 UTF-8 `.txt` 听写文件。不要要求用户把材料放进任何固定文件夹；本技能不处理录音，也不调用外部转写服务。
+Use this skill for transcript text pasted directly into chat or supplied as an uploaded UTF-8 `.txt` file. Do not ask users to place material in a particular folder. This skill does not process recordings or call external transcription services.
 
-## 输入与输出
+## Input and output
 
-1. 将用户在聊天中提供的完整文字或上传的 `.txt` 文件视为事实来源。若用户未提供文本，提示其粘贴完整听写或上传 UTF-8 `.txt`。
-2. 保留原文中会影响决策、负责人、期限或承诺的不确定措辞；信息不足时按本技能规则标为 `待确认`，不得猜测。
-3. 以会议实际日期创建当前工作区的 `会议产出/YYYY-MM-DD/`。若会议日期缺失，可用当前日期命名输出目录，但纪要中的会议日期必须写为 `待确认`。
-4. 若目标日期目录已存在，停止并请用户选择其他输出目录或确认处理方式；不得覆盖既有会议资料。
-5. 生成最终交付物 `会议纪要.pdf`，作为聊天附件交付，并保存在该输出目录。输出目录不可写或没有当前工作区时，请用户提供可写工作区或输出路径。
-6. 若来源是用户上传的文件，将其复制到输出目录并命名为 `听写原文.txt`。若来源是聊天粘贴的文本，不额外保存原文，除非用户明确要求。
+1. Treat the complete text pasted in chat or the uploaded `.txt` file as the source of record. If no text is provided, ask the user to paste the complete transcript or upload a UTF-8 `.txt` file.
+2. Preserve uncertainty that affects a decision, owner, deadline, or commitment. When information is insufficient, use `待确认` according to these rules; never guess.
+3. Create `会议产出/YYYY-MM-DD/` in the current workspace using the actual meeting date. If that date is unknown, use the current date only for the folder name and show `待确认` as the meeting date in the minutes.
+4. If the target date folder already exists, stop and ask the user to select another output location or confirm how to proceed. Never overwrite existing meeting material.
+5. Generate `会议纪要.pdf`, return it as a chat attachment, and save it in the output folder. If no writable workspace is available, ask the user to provide one or specify an output path.
+6. For an uploaded source file, copy it into the output folder as `听写原文.txt`. Do not separately save text pasted in chat unless the user explicitly asks.
 
-## 内容规则
+## Content rules
 
-先阅读 [内容规则](references/content_rules.md)、[纪要模板](references/meeting_minutes_template.md) 和 [PDF 版式规范](references/pdf_layout.md)。只提取已确认决定、行动项、负责人、期限、既有任务状态、风险、阻塞项与待确认事项；不要逐句改写听写文本。
+Read [content rules](references/content_rules.md), [the minutes template](references/meeting_minutes_template.md), and [the PDF layout specification](references/pdf_layout.md) before drafting. Extract only confirmed decisions, action items, owners, deadlines, existing-task status, risks, blockers, and open questions; do not paraphrase the transcript sentence by sentence.
 
-固定内部成员候选名单为：`Fred`、`Eva`、`CC`、`Yuri`、`Winona`、`Albee`、`Austin`、`William`。
+The fixed internal roster is `Fred`, `Eva`, `CC`, `Yuri`, `Winona`, `Albee`, `Austin`, and `William`.
 
-- 对内部成员先进行不区分大小写的匹配；只有唯一且明显的同音、混合文字、缩写或拼写错误时，才纠正为名单中的标准拼写。
-- 不要把客户、供应商或其他外部人员强行匹配到内部名单；保留其原始姓名，并标注关系（如“客户：<姓名>”）。
-- 听写明确指派给名单成员时，保留该姓名。第一人称“我来做”只有在说话人身份有直接证据时才能映射为名单成员，否则负责人写 `待确认`。
-- 名单相近但无法唯一确定时不要猜测；出席名单也只列出听写明确支持的人员。
+- Match internal names case-insensitively. Correct a phonetic, mixed-script, abbreviated, or misspelled name only when it uniquely and clearly identifies a roster member.
+- Never force a client, supplier, or other external person onto the internal roster. Preserve the transcribed name and state the relationship where useful.
+- When the transcript explicitly assigns work to a roster member, retain that name. Map a first-person commitment only with direct evidence of the speaker identity; otherwise use `待确认` for the owner.
+- Do not guess between similar names. List only attendees supported explicitly by the transcript.
 
-## PDF 交付
+## PDF delivery
 
-使用 [品牌 Word 模板](assets/Logo%20Template.docx) 与版式规范创建最终 PDF。必须保留模板中的页眉、页脚、底板和页面设置；完成后渲染检查中文字体、表格、换行、分页、页眉页脚及每页可读性。
+Use the [branded Word template](assets/Logo%20Template.docx) with the layout specification to create the final PDF. Preserve its headers, footers, background, and page settings. Render and inspect the PDF for Chinese-font support, tables, wrapping, pagination, headers, footers, and readability on every page.
 
-最终 PDF 必须包含固定的五个章节和指定表格。临时 Markdown 或 DOCX 草稿仅用于生成过程；不要在输出目录保留 `会议纪要.md`。交付前核查：
+The final PDF must contain the five required sections and tables. Markdown or DOCX drafts are temporary only; do not retain `会议纪要.md` in the output folder. Before delivery, verify that:
 
-1. 未虚构事实、决策、负责人、期限或说话人身份。
-2. 提议与已确认决定已明确区分。
-3. 行动项包含可交付物，并仅在证据充分时写明负责人和日期。
-4. 风险表仅包含会影响决策、进度、预算或交付的关键未决项。
-5. `会议纪要.pdf` 已作为聊天附件和工作区副本交付。
+1. No facts, decisions, owners, deadlines, or speaker identities were invented.
+2. Proposals and confirmed decisions are clearly distinguished.
+3. Action items identify deliverables, and identify owners and dates only when supported by evidence.
+4. The risk table contains only material unresolved matters that affect a decision, schedule, budget, or delivery.
+5. `会议纪要.pdf` was delivered both as a chat attachment and as a workspace copy.
