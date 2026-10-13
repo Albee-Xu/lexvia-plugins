@@ -1,49 +1,42 @@
 ---
 name: australia-migration-watch
-description: Monitor and verify material Australian immigration and visa policy changes from official sources, then provide concise Chinese alerts or reports. Use for migration-policy monitoring and official-source verification, not individual immigration advice.
+description: Verify material Australian migration and visa policy changes from official sources and produce concise Chinese alerts or reports. Not for individual migration advice.
 ---
 
-# 澳大利亚移民政策监测
+# Australian Migration Policy Watch
 
-用于核验澳大利亚官方移民与签证政策变化，并以中文说明变化内容、生效时间、影响范围和官方原文。仅整理公开资讯，不提供个案资格、成功率或递交策略建议。
+Verify official migration and visa changes, then explain the effective date, scope, and source in Chinese. Summarize public information only; do not assess eligibility, prospects, or strategy.
 
-## 信息源与边界
+## Sources and limits
 
-- 只将澳大利亚联邦、州或领地政府页面、立法文书及其直接链接的官方文件作为“政策已变化”的证据。开始监测前阅读[官方来源清单](references/sources.md)。
-- 媒体、社交媒体、论坛、移民中介或搜索结果只能作为线索，不能单独证明规则已改变。
-- 不要求、不保存护照、签证号、ImmiAccount、财务信息或其他申请材料。
-- 若用户提供个人情况，只说明应核对的官方条件；不要判断是否符合资格或建议申请策略。
+- Before monitoring, read [official sources](references/sources.md). Only Australian federal, state, or territory government pages, instruments, and directly linked official documents prove a change.
+- Media, social posts, forums, agents, and search results are leads only.
+- Do not request or retain passports, visa numbers, ImmiAccount data, finances, or application documents.
+- For personal circumstances, identify official conditions to check; do not determine eligibility or recommend a strategy.
 
-## 何时构成重大变化
+## Material changes
 
-只有下列已由官方原文确认的实质变化才应标为“重大变化”：
+Alert only for an official substantive change to:
 
-1. 移民计划配额、州/领地提名名额、项目开放/关闭或邀请规则改变；
-2. 技术职业清单、ANZSCO、评估机构或职业限制调整；
-3. 签证资格、费用、英语要求、签证条件、雇主担保规则或审理优先级改变；
-4. 190、491、学生签、485、482 及其他临时工作签的规则、窗口或过渡安排改变；
-5. 新法规、Ministerial Direction 或官方公告设定影响申请人的生效日或截止日。
+1. migration or nomination allocations, program opening/closure, or invitation rules;
+2. occupation lists, ANZSCO, assessing authorities, or occupation restrictions;
+3. visa eligibility, fees, English requirements, conditions, sponsorship, or processing priorities;
+4. rules, windows, or transition arrangements for 190, 491, student, 485, 482, or other temporary work visas; or
+5. legislation, Ministerial Directions, or notices with an applicant-facing effective date or deadline.
 
-页面版式调整、普通审理时间波动、新闻评论、未经核实的线索，以及无法确认实质差异的内容都不是重大变化。遇到这类情况，写“待核实”或“未发现已核实的重大变化”，不要发出政策提醒。
+Ignore redesigns, routine processing-time movement, commentary, unverified leads, and changes without a confirmed material difference. Mark these pending, or report no verified material change.
 
-## 核验方法
+## Verification
 
-对每一项候选变化，记录并核对：
+For each candidate, record the official title and URL; publication/update and effective/deadline dates (or “not stated”); affected subclass, stream, state/territory, occupation, or cohort; confirmed difference from the prior rule; and a locatable paragraph, table, or provision.
 
-- 官方页面/文书标题与 URL；
-- 发布或更新日期，以及生效或截止日期（未说明则写“官方页面未说明”）；
-- 适用的 visa subclass、stream、州/领地、职业或申请人群；
-- 与此前规则相比的明确差异；
-- 可定位的原文段落、表格或文书条款。
+Do not infer a difference without a reliable earlier version. Separate state nomination from federal visa rules; nomination does not guarantee a visa grant.
 
-没有旧版本或可靠历史记录时，不要凭印象描述“前后差异”；应说明无法确认，并保持待核实状态。州/领地担保规则与联邦签证规则分开说明；州提名不等于签证获批。
+## Output
 
-## 输出
+For a monitoring request with no verified item, reply: “本次未发现已核实的重大政策变化”, state the official scope checked, and note access limits.
 
-用户要求“检查更新”“是否有变化”或执行监测任务时：
-
-- 没有已核实重大变化：简短答复“本次未发现已核实的重大政策变化”，并列出已检查的官方范围和任何访问限制。
-- 有重大变化：按影响程度排序，每项使用以下格式：
+For verified changes, sort by impact:
 
 ```markdown
 ## [政策名称](官方原文链接)
@@ -55,7 +48,7 @@ description: Monitor and verify material Australian immigration and visa policy 
 - 建议核对：读者应自行确认的官方条件或过渡安排
 ```
 
-用户明确要求“重大变化提醒”时，只有已核实事项才输出：
+For an explicit material-change alert, include verified items only:
 
 ```markdown
 ⚠️ [签证类别/州或政策名称]：规则更新
@@ -63,6 +56,6 @@ YYYY-MM-DD 起，……（一句说明规则变化及影响范围）。
 [查看官方原文](官方链接)
 ```
 
-没有重大变化时保持安静；不要用旧闻或泛泛背景填充提醒。对所有输出附上：
+Stay silent when no material change exists; do not pad alerts with old news. Append:
 
 > 本内容仅整理公开政策资讯，不构成移民或法律建议；请以官方原文及个人情况为准。
