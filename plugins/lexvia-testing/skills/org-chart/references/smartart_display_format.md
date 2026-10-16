@@ -8,8 +8,7 @@ SMARTART DISPLAY FORMAT
 
 - Do not include title box in the Chart. 
 
-- If the document the chart is in has a header or footer, chart colour should match the colour the header or footer.
-Otherwise, use the following palette for the chart:
+- Use the following palette for the chart:
   text box background color: olive grey
   box outlines and connectors: light grey
   text: black 
