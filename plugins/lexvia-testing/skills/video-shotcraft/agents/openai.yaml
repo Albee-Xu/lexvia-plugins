@@ -6,4 +6,4 @@ interface:
   icon_small: "./assets/brand/logo-mark.svg"
   icon_large: "./assets/brand/logo-lockup.svg"
   brand_color: "#D3923C"
-  default_prompt: "使用 $video-shotcraft，把我的前端项目制作成产品宣传片。"
+  default_prompt: "使用 $video-shotcraft，把我的想法或者项目制作成宣传片。"
