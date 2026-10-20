@@ -1,10 +1,12 @@
 {
   "name": "lexvia-marketing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "plugin with marketing AI skills",
   "skills": "./skills/",
   "interface": {
     "displayName": "Marketing Department",
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png",
     "shortDescription": "plugin with marketing AI skills",
     "capabilities": []
   }
