@@ -22,7 +22,9 @@ Coordinate evidence-backed form completion. The agent performs interpretation; t
 
 ## Inputs and dependency check
 
-Obtain the source folder, blank PDF, intended person/organisation and matter, output location, and explicit user answers already supplied. Ask only for missing inputs that cannot be inferred reliably. 
+- Obtain the source folder, blank PDF form, intended person/organisation and matter, output location, and explicit user answers already supplied. Ask only for missing inputs that cannot be inferred reliably. 
+
+- If the user does not specify a pdf form to fill out, ask for clarification. Do not proceed before getting a valid PDF form. 
 
 1. Discover the actually available native skills/tools and their supported formats. Read [source-routing.md](references/source-routing.md). Prefer Documents for DOC/DOCX; Spreadsheets for XLS/XLSX/CSV/TSV; Presentations for slide decks; compatible local email, text/HTML, image and OCR readers for those files.
 2. Locate and read the authorized **Anthropic PDF** dependency and its form workflow before PDF work. Use the actual installed files and commands; do not assume a similarly named PDF plugin is the same dependency. Record the revision or content hash. Do not bundle, rewrite, or silently substitute its filling engine.
@@ -32,12 +34,11 @@ Obtain the source folder, blank PDF, intended person/organisation and matter, ou
 
 ### 1. Inspect the target form
 
-
-Use Anthropic PDF to inspect the template, extract its field inventory, and render pages without opening a viewer. The original `probe_pdf.py` helper can provide a supplemental structural inventory using the PDF skill's documented pypdf approach; it is not a filler or repair tool.
+Use Anthropic PDF to inspect the PDF form, extract its field inventory, and render pages without opening a viewer. The original `probe_pdf.py` helper can provide a supplemental structural inventory using the PDF skill's documented pypdf approach; it is not a filler or repair tool.
 
 Compare field trees with page widgets, parent relationships, duplicate names and export values. Multiple widgets per radio group are normal; detect unmapped or ambiguous widgets rather than demanding equal counts. Check readable text, rendering, writable round-trip compatibility, signatures, and XFA as relevant.
 
-Use a profile tied to the exact template hash. For an unfamiliar or changed template, build/verify a new profile from the actual PDF. Include questions, roles, applicability, valid choices, formats, repeated slots, and manual/signature areas. Preserve inactive sections and the template's wording. Repair only a derivative through the PDF dependency; if integrity cannot be established, report the limitation and retain a partial evidence draft. A different template or static-output fallback needs an explicit workflow choice.
+For an unfamiliar or changed form, build/verify a new profile from the actual PDF. Include questions, roles, applicability, valid choices, formats, repeated slots, and manual/signature areas. Preserve inactive sections and the form's wording. Repair only a derivative through the PDF dependency; if integrity cannot be established, report the limitation and retain a partial evidence draft. A different template or static-output fallback needs an explicit workflow choice.
 
 ### 2. Inventory and route sources
 
