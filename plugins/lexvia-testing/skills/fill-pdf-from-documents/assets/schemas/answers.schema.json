@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/fill-pdf-from-documents/answers.schema.json",
+  "title": "Form answer decisions",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "template_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "matter_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "supported",
+              "conflict",
+              "missing",
+              "unreadable",
+              "not_applicable",
+              "manual"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "user_answer_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resolution_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "field_key",
+          "subject_id",
+          "role",
+          "status",
+          "evidence_ids",
+          "user_answer_ids"
+        ]
+      }
+    },
+    "overflow": {
+      "type": "array"
+    },
+    "qa": {
+      "type": "object",
+      "properties": {
+        "readback": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail",
+            "not_applicable"
+          ]
+        },
+        "rendered": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail",
+            "not_applicable"
+          ]
+        },
+        "originals": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail",
+            "not_applicable"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "readback",
+        "rendered",
+        "originals",
+        "notes"
+      ]
+    },
+    "subject_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_id",
+    "template_sha256",
+    "subject_id",
+    "matter_id",
+    "answers",
+    "qa"
+  ]
+}

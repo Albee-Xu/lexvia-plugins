@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/fill-pdf-from-documents/form-profile.schema.json",
+  "title": "Exact-template form profile",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "template": {
+      "type": "object",
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "geometry": {
+          "type": [
+            "array",
+            "object"
+          ]
+        },
+        "structural_signature": {
+          "type": [
+            "string",
+            "object"
+          ]
+        }
+      },
+      "required": [
+        "sha256",
+        "pages"
+      ]
+    },
+    "readiness": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "blocked",
+            "draft"
+          ]
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "status",
+        "issues"
+      ]
+    },
+    "logical_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": [
+              "string",
+              "integer"
+            ]
+          },
+          "part": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "text",
+              "date",
+              "boolean",
+              "choice",
+              "signature",
+              "signing_date",
+              "declaration",
+              "consent"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "manual": {
+            "type": "boolean"
+          },
+          "conditions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "max_length": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "mappings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "fillable",
+                    "annotation"
+                  ]
+                },
+                "field_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widget_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rect": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "verified": {
+                  "type": "boolean"
+                },
+                "unique": {
+                  "type": "boolean"
+                },
+                "export_values": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "page",
+                "verified",
+                "unique"
+              ]
+            }
+          }
+        },
+        "required": [
+          "key",
+          "role",
+          "type",
+          "required",
+          "manual",
+          "mappings"
+        ]
+      }
+    },
+    "branches": {
+      "type": "array"
+    },
+    "capacity_rules": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "field_keys": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "max_supported": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "field_keys",
+              "max_supported"
+            ]
+          }
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "widgets": {
+      "type": [
+        "array",
+        "object"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_id",
+    "profile_version",
+    "template",
+    "readiness",
+    "logical_fields"
+  ]
+}

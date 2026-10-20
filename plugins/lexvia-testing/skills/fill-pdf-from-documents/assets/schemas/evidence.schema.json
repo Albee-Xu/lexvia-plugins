@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/fill-pdf-from-documents/evidence.schema.json",
+  "title": "Candidate facts and explicit user answers",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "field_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "raw_value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "locator": {
+            "$ref": "#/$defs/locator"
+          },
+          "excerpt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "extraction": {
+            "type": "object",
+            "properties": {
+              "reader_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reader_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "method": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "reader_id",
+              "reader_version",
+              "method"
+            ]
+          },
+          "derivative_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "original_locator": {
+            "$ref": "#/$defs/locator"
+          },
+          "transformations": {
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "accepted",
+              "rejected"
+            ]
+          },
+          "assertion": {
+            "enum": [
+              "explicit",
+              "inferred",
+              "ambiguous"
+            ]
+          },
+          "rejection_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "formula_provenance": {
+            "enum": [
+              "stored",
+              "cached",
+              "recalculated",
+              "not_applicable"
+            ]
+          },
+          "applicable_at": {
+            "type": "string",
+            "minLength": 1
+          },
+          "context": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_id",
+          "field_key",
+          "subject_id",
+          "role",
+          "raw_value",
+          "value",
+          "locator",
+          "excerpt",
+          "extraction",
+          "status",
+          "assertion"
+        ]
+      }
+    },
+    "user_answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "answer_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "field_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "explicit": {
+            "const": true
+          },
+          "provided_by": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "const": "user"
+          },
+          "confirmation_scope": {
+            "enum": [
+              "fact",
+              "consent",
+              "declaration",
+              "signature",
+              "signing_date"
+            ]
+          },
+          "appropriate_person_confirmed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "answer_id",
+          "field_key",
+          "subject_id",
+          "role",
+          "value",
+          "explicit",
+          "provided_by",
+          "source"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "records",
+    "user_answers"
+  ],
+  "$defs": {
+    "locator": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "pdf",
+            "word",
+            "spreadsheet",
+            "csv",
+            "slide",
+            "email",
+            "text",
+            "html",
+            "image"
+          ]
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "region": {
+          "type": [
+            "array",
+            "object",
+            "string"
+          ]
+        },
+        "paragraph": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "table": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "column": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "rendered_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rendered_page_verified": {
+          "const": true
+        },
+        "sheet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cell": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "slide": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "element": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message_id_unavailable": {
+          "const": true
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "selector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "frame": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "kind"
+      ]
+    }
+  }
+}
