@@ -5,7 +5,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Development",
-    "icon_small": "./assets/Lexvia_logo.png",
+    "logo": "./assets/Lexvia_logo.png",
+    "composerIcon": "./assets/Lexvia_logo.png",
     "shortDescription": "company-wide plugin for testing skills and capabilities.",
     "capabilities": []
   }
