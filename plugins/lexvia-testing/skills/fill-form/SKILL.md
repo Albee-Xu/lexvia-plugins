@@ -1,8 +1,8 @@
 ---
-name: fill-pdf-from-documents
-description: Fill a blank PDF form using evidence from a selected folder of mixed documents. Use for document-backed form completion, or when user prompts require reading multiple documents to fill out a pdf form. 
+name: fill-form
+description: Fill a blank PDF form using evidence from a selected folder of mixed documents. Use for document-backed form completion, or when user prompts require reading one or more documents to fill out a pdf form. 
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   compatibility: "Local file-capable agent and Python 3; authorized Anthropic PDF for PDF work; native readers discovered at runtime; headless execution only."
 ---
 
