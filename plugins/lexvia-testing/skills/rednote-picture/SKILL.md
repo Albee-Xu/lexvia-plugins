@@ -1,9 +1,9 @@
 ---
-name: lexvia-legal-visual
+name: rednote-picture
 description: Turn pasted Chinese or bilingual Australian legal copy into a polished LEXVIA social-media image. Use whenever a user pastes article copy, a headline with notes, or legal post text; do not use for copywriting, legal analysis, translation, or text-only editing.
 ---
 
-# Lexvia Legal Visual
+# Rednote Picture
 
 When the user pastes standalone article copy, a headline with supporting points, or a legal social post, treat it as a request to make the visual unless they explicitly ask for analysis, rewriting, translation, or another text-only task. **Directly generate the finished image in the same turn.** Do not merely provide a prompt, design plan, or a `SKILL.md` explanation. Use the image-generation tool and return the result.
 

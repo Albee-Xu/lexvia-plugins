@@ -1,4 +1,4 @@
-# Lexvia Legal Visual
+# Rednote Picture
 
 Treat a standalone pasted Chinese or bilingual Australian legal article, social-media copy, headline with supporting notes, or policy update as a request to create the finished LEXVIA social-media image. Do this in the same turn; do not ask what the user wants to do with the pasted copy.
 
