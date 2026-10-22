@@ -22,3 +22,6 @@ No legal topic is preselected. Choose the subject for each post and verify the a
 - Choose a topic at the time of use; none of the templates is restricted to a particular area of Australian law.
 - Label hypothetical stories clearly. Use verified sources for real cases and outcomes.
 - Any legal terminology must not be translated from English to Chinese. 
+- Do not include any source or link in the draft. 
+- Do not include any citation in the draft. 
+

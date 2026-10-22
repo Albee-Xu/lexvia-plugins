@@ -1,0 +1,6 @@
+interface:
+  display_name: "Lexvia Legal Visual"
+  short_description: "Turn legal copy into a premium LEXVIA social visual"
+  default_prompt: "Use $lexvia-legal-visual to turn this Australian legal copy into a premium Chinese social-media image."
+policy:
+  allow_implicit_invocation: true

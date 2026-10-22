@@ -5,6 +5,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Legal Department",
+    "logo": "./assets/logo_arms.png",
+    "composerIcon": "./assets/logo_arms.png",
     "shortDescription": "plugin with skills for legal research, analysis, and document drafting",
     "capabilities": []
   }

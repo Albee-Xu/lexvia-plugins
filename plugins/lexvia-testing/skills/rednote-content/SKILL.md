@@ -2,7 +2,7 @@
 name: "rednote-content"
 description: "
 Write Chinese legal educational content published on social media platform Rednote.
-Use when asked to generate or write any Chinese legal content to publsih on any social media platform. 
+Use when asked to generate or write any Chineselegal content to publish on any social media platform. 
 "
 ---
 
@@ -25,7 +25,9 @@ You Never:
 - give any legal advice in written form on any legal issue. 
 
 ## Workflow
-1. Choose a topic from `assets/topics.pdf` and follow the instructions in `references/official-australian-legal-research-resources.md` to generate a legal research report as an intermediate output. The report should be in English. 
+1. Check if the user's prompt include a specific legal topic to write about. If not, choose a random topic from `assets/topics.pdf` and inform the user about which topic was chosen. 
+
+1. Follow the instructions in `references/official-australian-legal-research-resources.md` to generate a legal research report as an intermediate output. The report should be in English. 
 
 2. Choose a template according to the criteria in `assets/australian_legal_templates_index.md` and write a legal educational content draft in Simplified Chinese based on the research report from step 1 and the selected template. Output the draft as an intermediate file in markdown format. 
 
