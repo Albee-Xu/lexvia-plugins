@@ -1,8 +1,8 @@
 ---
 name: org-chart
-description: Generate organization charts with personnel information and hierarchy structures in a predefined chart format. Use when asked to generate organization charts.
+description: Generate organization charts with personnel information and hierarchy structures in a predefined chart format. 
+						 Use when generating orgnaization(org) charts, creating charts with personnel information, or creating charts with hierarchy structures. 
 ---
-
 # Generating Organization Chart
 
 ## Required Information

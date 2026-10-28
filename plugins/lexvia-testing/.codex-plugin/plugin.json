@@ -1,10 +1,12 @@
 {
   "name": "lexvia-testing",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "company-wide plugin for testing skills and capabilities.",
   "skills": "./skills/",
   "interface": {
     "displayName": "Development",
+    "logo": "./assets/Lexvia_logo.png",
+    "composerIcon": "./assets/Lexvia_logo.png",
     "shortDescription": "company-wide plugin for testing skills and capabilities.",
     "capabilities": []
   }
