@@ -2,7 +2,7 @@
 name: "rednote-content"
 description: "
 Write Chinese legal educational content published on social media platform Rednote.
-Use when asked to generate or write any Chineselegal content to publish on any social media platform. 
+Use when asked to generate or write any Chinese legal content to publish on any social media platform. 
 "
 ---
 
@@ -44,6 +44,7 @@ You Never:
 - The final content should not contain any legal terminology with Chinese translation, either directly or in brackets. 
 - Check that the final content should never contain legal advice or any specific legal recommendations.
 - Never invoke user interface tools such as Microsoft Word. 
+- Restrict the final content's word count to 1000 characters. 
 
 
 
