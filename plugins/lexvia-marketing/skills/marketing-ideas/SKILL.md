@@ -1,7 +1,7 @@
 ---
 name: marketing-ideas
 description: >
-  Use this skill when generating marketing ideas, strategies, or tactics for SaaS and software products. Trigger phrases include: "give me marketing ideas," "what channels should we try," "brainstorm growth ideas," "underused marketing tactics," "growth loops for our product," "community marketing ideas," "content marketing ideas," "partnership ideas," "how to prioritize marketing experiments," "virality mechanics for SaaS."
+  Use this skill when generating marketing ideas, strategies, or tactics. Trigger phrases include: "give me marketing ideas," "what channels should we try," "brainstorm growth ideas," "underused marketing tactics," "growth loops for our product," "community marketing ideas," "content marketing ideas," "partnership ideas," "how to prioritize marketing experiments," "virality mechanics for our SaaS."
 ---
 
 # Marketing Ideas Generation Skill
@@ -31,7 +31,7 @@ description: >
 
 ## What This Skill Does
 
-This skill helps you generate, evaluate, and prioritize marketing ideas for SaaS and software products. It covers channel-specific ideation, underused tactics, growth loops, content strategy, community approaches, partnership models, and how to structure a marketing experiment backlog so you always know what to run next.
+This skill helps you generate, evaluate, and prioritize marketing ideas for products. It covers channel-specific ideation, underused tactics, growth loops, content strategy, community approaches, partnership models, and how to structure a marketing experiment backlog so you always know what to run next.
 
 Most SaaS companies spend 90% of their marketing effort on 20% of the available channels, because those channels feel familiar. The ideas that can actually move the needle are often the ones that feel slightly uncomfortable or unusual.
 
