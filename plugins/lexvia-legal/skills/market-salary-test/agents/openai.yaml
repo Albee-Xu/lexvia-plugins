@@ -1,0 +1,4 @@
+interface:
+  display_name: "Australian Market Salary Test"
+  short_description: " Conducting a market salary test for a job title in Australia."
+  default_prompt: "Use $market-salary-test to research the Australian market salary for a job title and produce a sourced report."
