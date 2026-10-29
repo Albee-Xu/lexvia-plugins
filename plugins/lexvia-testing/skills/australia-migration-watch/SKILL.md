@@ -1,61 +1,49 @@
 ---
 name: australia-migration-watch
-description: Verify material Australian migration and visa policy changes from official sources and produce concise Chinese alerts or reports. Not for individual migration advice.
+description: Monitor material Australian immigration-policy changes from official sources and produce verified Chinese alerts and branded weekly PDF reports. Use for visa, skilled migration, state nomination, occupation, fee, English, and processing-rule updates; not for personal eligibility advice.
 ---
 
 # Australian Migration Policy Watch
 
-Verify official migration and visa changes, then explain the effective date, scope, and source in Chinese. Summarize public information only; do not assess eligibility, prospects, or strategy.
+Verify public Australian migration-policy changes for Chinese readers. Report only evidence-based facts; do not assess an individual's eligibility, prospects, or application strategy.
 
-## Sources and limits
+## Sources, state, and scope
 
-- Before monitoring, read [official sources](references/sources.md). Only Australian federal, state, or territory government pages, instruments, and directly linked official documents prove a change.
-- Media, social posts, forums, agents, and search results are leads only.
-- Do not request or retain passports, visa numbers, ImmiAccount data, finances, or application documents.
-- For personal circumstances, identify official conditions to check; do not determine eligibility or recommend a strategy.
-
-## Material changes
-
-Alert only for an official substantive change to:
-
-1. migration or nomination allocations, program opening/closure, or invitation rules;
-2. occupation lists, ANZSCO, assessing authorities, or occupation restrictions;
-3. visa eligibility, fees, English requirements, conditions, sponsorship, or processing priorities;
-4. rules, windows, or transition arrangements for 190, 491, student, 485, 482, or other temporary work visas; or
-5. legislation, Ministerial Directions, or notices with an applicant-facing effective date or deadline.
-
-Ignore redesigns, routine processing-time movement, commentary, unverified leads, and changes without a confirmed material difference. Mark these pending, or report no verified material change.
+- Read [official sources](references/sources.md) before monitoring. Only Australian federal, state, territory, legislative, or directly linked official materials prove a policy change.
+- For recurring monitoring, follow [operations](references/operations.md). For weekly reports and PDFs, follow [weekly-report](references/weekly-report.md).
+- Do not retain passports, visa numbers, ImmiAccount details, finances, or application documents.
+- Monitor material changes to allocations, program openings or closures, occupation lists and assessing authorities, visa eligibility and conditions, fees, English rules, state nomination, processing priorities, legislation, and transition arrangements.
 
 ## Verification
 
-For each candidate, record the official title and URL; publication/update and effective/deadline dates (or “not stated”); affected subclass, stream, state/territory, occupation, or cohort; confirmed difference from the prior rule; and a locatable paragraph, table, or provision.
+For every candidate change, confirm the official title and URL, publication/update date, effective date or deadline, affected cohort, and a reliable before/after difference. Use one of: effective, announced-not-effective, proposed, or unverified. Do not infer a difference from a page redesign, ordinary processing-time movement, commentary, or an inaccessible source.
 
-Do not infer a difference without a reliable earlier version. Separate state nomination from federal visa rules; nomination does not guarantee a visa grant.
+State nomination and a federal visa grant are separate outcomes. If a prior rule cannot be verified, say so rather than claiming a comparison.
 
-## Output
+## Outputs
 
-For a monitoring request with no verified item, reply: “本次未发现已核实的重大政策变化”, state the official scope checked, and note access limits.
+### Material-change alert
 
-For verified changes, sort by impact:
-
-```markdown
-## [政策名称](官方原文链接)
-
-- 状态：已生效／将于 YYYY-MM-DD 生效／拟议／待核实
-- 影响：适用的签证类别、州/领地或申请人范围
-- 变化：与此前规则相比的事实差异
-- 生效/截止：YYYY-MM-DD；如未说明则写“官方页面未说明”
-- 建议核对：读者应自行确认的官方条件或过渡安排
-```
-
-For an explicit material-change alert, include verified items only:
+Alert only for high-impact changes, or medium-impact changes with a deadline. Do not repeat an alert unless the rule, effective date, transition arrangement, or official version materially changes.
 
 ```markdown
-⚠️ [签证类别/州或政策名称]：规则更新
-YYYY-MM-DD 起，……（一句说明规则变化及影响范围）。
-[查看官方原文](官方链接)
+⚠️ [Visa/state/policy]: rule update
+
+- Status: effective / effective YYYY-MM-DD / proposed / unverified
+- Published: YYYY-MM-DD; effective/deadline: YYYY-MM-DD or not stated
+- Affected: visa, occupation, state program, or cohort
+- Change: verified difference from the prior rule
+- Check: official condition, evidence, or deadline to confirm
+
+[Official source](URL)
 ```
 
-Stay silent when no material change exists; do not pad alerts with old news. Append:
+### Weekly PDF
+
+Include only verified changes first seen, updated, or effective in the reporting period. If no material change is verified, still produce a PDF and state in Chinese: “本周期未发现已核实的重大政策变化”. Do not fill the report with old news.
+
+Use `references/logo template.docx` as the fixed company template. Store PDFs and state in the user's local project directory, never in the plugin directory. Render and visually inspect every PDF page, including the logo, Chinese text, page numbers, links, and overflow.
+
+Append to Chinese reader-facing alerts and reports:
 
 > 本内容仅整理公开政策资讯，不构成移民或法律建议；请以官方原文及个人情况为准。
