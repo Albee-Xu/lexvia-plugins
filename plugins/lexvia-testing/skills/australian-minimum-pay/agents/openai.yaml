@@ -1,4 +1,0 @@
-interface:
-  display_name: "Australian Minimum Pay"
-  short_description: "Find Australian award minimum wages by occupation"
-  default_prompt: "Use $australian-minimum-pay to find the minimum full-time pay for my profession, accounting for any location, experience and other conditions I provide."

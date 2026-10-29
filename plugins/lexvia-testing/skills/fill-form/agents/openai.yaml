@@ -1,4 +1,0 @@
-interface:
-  display_name: "Fill PDF from Documents"
-  short_description: "Fill PDF forms from evidence in mixed document folders"
-  default_prompt: "Use $fill-pdf-from-documents to read my source folder with matching document skills, resolve evidence, and fill a draft PDF form without opening any user interface."
