@@ -35,7 +35,7 @@ Briefly describe the likely duties and seniority. Identify close title synonyms 
 Browse on every run. Start with the original publisher and open the actual page, advertisement, table or PDF that contains the figures. Search results and locate evidence; snippets alone do not establish verified pay. Record the access date separately from the data reference period or publication date.
 
 #### 2.1 Find Industry and Occupational Awards from Fair Work
-- Use the australian-minimum-pay skill to find a minnimum annual base salary for the occupation. If no awar is found, report the missing award in the final output and skip to the next step to find multiple salary surveys.
+- Use the `australian-minimum-pay` skill to find a minimum annual base salary for the occupation. If no award is found, report the missing award in the final output and skip to the next step to find multiple salary surveys.
 
 #### 2.2 Collect Multiple Salary Surveys
 - Collect at least three reputable salary survey, guide, or review that include the occupation with given conditions(experience level, location, etc.). Prefer surveys with a clear methodology, sample size, and date. Use the most recent edition available. 
